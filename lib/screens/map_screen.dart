@@ -1,13 +1,15 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:app_features/models/place.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapScreen extends StatefulWidget {
-  final PlaceLocation initialLocation;
+  PlaceLocation? initialLocation;
   final bool isSelecting;
 
   //must be const bec it an init val so u have to prevent change the val in runtime
-  const MapScreen({
+  MapScreen({
     super.key,
     this.initialLocation = const PlaceLocation(
       latitude: 23.453,
@@ -57,18 +59,18 @@ class _MapScreenState extends State<MapScreen> {
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
           target: LatLng(
-            widget.initialLocation.latitude,
-            widget.initialLocation.longitude,
+            widget.initialLocation!.latitude,
+            widget.initialLocation!.longitude,
           ),
           zoom: 16,
         ),
         onTap: widget.isSelecting ? _selectedLocation : null,
-        markers: _pickedLocationCondition()
+        markers: _pickedLocationCondition() && widget.isSelecting
             ? {}
             : {
                 Marker(
                   markerId: const MarkerId('m1'),
-                  position: _pickedLocation,
+                  position: _pickedLocation, //try here ?? initial val
                 ),
               },
       ),

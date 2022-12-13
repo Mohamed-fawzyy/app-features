@@ -12,6 +12,10 @@ class GreatePlace with ChangeNotifier {
     return [..._items];
   }
 
+  Place getPlaceByID(String id) {
+    return _items.firstWhere((place) => place.id == id);
+  }
+
   Future<void> addPlace(
     String pickedTitle,
     File pickedImage,
