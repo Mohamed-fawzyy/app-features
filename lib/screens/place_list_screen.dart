@@ -1,4 +1,5 @@
 import 'package:app_features/provider/greate_place.dart';
+import 'package:app_features/screens/place_details_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +46,12 @@ class PlaceListScreen extends StatelessWidget {
                               greatPlace.items[i].location!.address.isEmpty
                                   ? const Text('can\'t reach the address')
                                   : Text(greatPlace.items[i].location!.address),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushNamed(
+                              PlaceDetailsScreen.routeName,
+                              arguments: greatPlace.items[i].id,
+                            );
+                          },
                         ),
                       ),
               ),
