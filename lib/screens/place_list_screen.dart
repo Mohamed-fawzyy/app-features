@@ -41,6 +41,10 @@ class PlaceListScreen extends StatelessWidget {
                                 FileImage(greatPlace.items[i].image),
                           ),
                           title: Text(greatPlace.items[i].title),
+                          subtitle:
+                              greatPlace.items[i].location!.address.isEmpty
+                                  ? const Text('can\'t reach the address')
+                                  : Text(greatPlace.items[i].location!.address),
                           onTap: () {},
                         ),
                       ),
