@@ -5,8 +5,8 @@ A new Flutter project📱.
 #### RoadMap 🚸
 ---
 * [Introduction](https://github.com/Mohamed-fawzyy/app-features#Introduction "Named link title")
-* [Key Features](https://github.com/Mohamed-fawzyy/features#Key-Features "Named link title")
-* [Samples](https://github.com/Mohamed-fawzyy/features#Samples "Named link title")
+* [Key Features](https://github.com/Mohamed-fawzyy/app-features#Key-Features "Named link title")
+* [Samples](https://github.com/Mohamed-fawzyy/app-features#Samples "Named link title")
 
 #### Introduction
 ---
