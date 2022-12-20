@@ -1,4 +1,4 @@
-# Movies_App
+# app-features
 
 A new Flutter project📱.
 
