@@ -9,7 +9,8 @@ A new Flutter project📱.
 * [Samples](https://github.com/Mohamed-fawzyy/features#Samples "Named link title")
 
 #### Introduction
----It's a simple app for making a list of visited places as a memory by adding the place title, image, and location.
+---
+It's a simple app for making a list of visited places as a memory by adding the place title, image, and location.
 
 #### Key Features
 ---
